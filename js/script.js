@@ -22,6 +22,7 @@ const unlockInterval = setInterval(() => {
         clearInterval(unlockInterval); // Stop the countdown
         lockScreen.style.display = 'none';
         websiteContent.style.display = 'block';
+        triggerConfetti();
         return; // Exit the function
     }
 
@@ -46,6 +47,24 @@ function formatTime(time) {
 
 // --- ALBUM & MUSIC INTERACTIVITY (FIXED VERSION) ---
 
+function triggerConfetti() {
+    const canvas = document.getElementById('confetti-canvas');
+    const myConfetti = confetti.create(canvas, {
+        resize: true,
+        useWorker: true
+    });
+
+    // A celebratory burst!
+    myConfetti({
+        particleCount: 150,
+        spread: 180,
+        origin: { y: 0.6 },
+        // Use your theme's colors
+        colors: ['#D4AF37', '#FFFFFF', '#002D62']
+    });
+}
+
+
 const enterButton = document.getElementById('enter-button');
 const landingPage = document.getElementById('landing-page');
 const backgroundSong = document.getElementById('background-song');
@@ -55,11 +74,11 @@ let albumInitialized = false, currentPage = 0;
 
 function initializeAlbum() {
     const album = $('#album');
-    
+
     // Calculate responsive dimensions
     const windowWidth = $(window).width();
     const windowHeight = $(window).height();
-    
+
     // Use 80% of viewport for better fit, with max constraints
     const albumWidth = Math.min(1000, windowWidth * 0.8);
     const albumHeight = Math.min(700, windowHeight * 0.8);
@@ -69,27 +88,27 @@ function initializeAlbum() {
         album.turn('size', albumWidth, albumHeight);
         return;
     }
-    
+
     // Initialize Turn.js for the first time
     album.turn({
         width: albumWidth,
         height: albumHeight,
         elevation: 50,
         gradients: true,
-        autoCenter: true,   
+        autoCenter: true,
         display: 'double',
         acceleration: true,
         duration: 1000,
         when: {
-            turned: function(event, page) {
+            turned: function (event, page) {
                 currentPage = page;
                 // console.log('Current page: ' + page);
             }
         }
     });
-    
+
     albumInitialized = true;
-    
+
     // Force a layout recalculation after initialization
     setTimeout(() => {
         album.turn('resize');
@@ -98,7 +117,7 @@ function initializeAlbum() {
 
 // Listen for a click on the "Begin the Journey" button
 enterButton.addEventListener('click', () => {
-    
+
     // Play the music
     backgroundSong.play().catch(error => console.log("Audio play failed: ", error));
 
@@ -115,7 +134,7 @@ enterButton.addEventListener('click', () => {
 });
 
 // Handle window resize
-$(window).on('resize', function() {
+$(window).on('resize', function () {
     if (albumInitialized && $('#album').turn('is')) {
         initializeAlbum();
     }
@@ -126,9 +145,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
         children = album.children;
     let next = true;
 
-    for(var i = 0; i< album.childElementCount; i++) {
+    for (var i = 0; i < album.childElementCount; i++) {
         let child = children[i];
-        const button = document.createElement('button', type='button');
+        const button = document.createElement('button', type = 'button');
 
         button.classList.add('b1');
 
@@ -136,10 +155,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         if (next) button.textContent = '➤';
         else button.textContent = '⮜';
 
-        if  (i === album.childElementCount - 1) button.textContent ='';
+        if (i === album.childElementCount - 1) button.textContent = '';
         else if (i === 0) button.textContent = "Enter";
-    
-        button.classList.add('page-'+i)
+
+        button.classList.add('page-' + i)
         button.addEventListener('click', (event) => changePage(event.target));
         next = !next;
     }
@@ -154,5 +173,5 @@ function changePage(button) {
     } else {
         $('#album').turn('page', page - 1);
     }
-    
+
 }

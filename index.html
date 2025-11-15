@@ -14,6 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Lato:wght@300;400&display=swap"
         rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
 </head>
 
 <body>
@@ -50,6 +51,7 @@
 
     <!-- SECTION 2: The Main Website Content (Initially Hidden) -->
     <div id="website-content">
+        <canvas id="confetti-canvas"></canvas>
 
         <!-- The Landing Page -->
         <div id="landing-page">
@@ -63,6 +65,10 @@
 
         <!-- The Photo Album (We will build this later) -->
         <div id="photo-album-container">
+            <div id="video-overlay"></div>
+            <video autoplay muted loop playsinline id="background-video">
+                <source src="images\video.mp4" type="video/mp4">
+            </video>
             <div id="album">
                 <!-- Page 1: The Cover -->
                 <div class="page hard">
@@ -105,7 +111,7 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo13.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
+                        <p>A fine time of graceful aging</p>
                     </div>
                 </div>
 
@@ -113,7 +119,6 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo2.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
                     </div>
                 </div>
 
@@ -121,7 +126,8 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo3.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
+                        <p>i still cant believe it has been three years since.</p>
+                        <p>You made this day beautiful</p>
                     </div>
                 </div>
 
@@ -129,7 +135,6 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo4.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
                     </div>
                 </div>
 
@@ -137,7 +142,6 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo5.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
                     </div>
                 </div>
 
@@ -145,7 +149,6 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo6.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
                     </div>
                 </div>
 
@@ -153,7 +156,6 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo8.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
                     </div>
                 </div>
 
@@ -161,7 +163,6 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo9.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
                     </div>
                 </div>
 
@@ -169,7 +170,6 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo10.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
                     </div>
                 </div>
 
@@ -177,7 +177,6 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo11.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
                     </div>
                 </div>
 
@@ -185,7 +184,7 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo12.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
+                        <p>A voice of if humans were angels.</p>
                     </div>
                 </div>
 
@@ -193,15 +192,13 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo14.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
                     </div>
                 </div>
 
                 <!-- Page 19: Your second photo and story -->
                 <div class="page">
                     <div class="page-content">
-                        <img src="images/photo15.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
+                        <img src="images/photo52.jpg" alt="Another memory">
                     </div>
                 </div>
 
@@ -209,7 +206,6 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo16.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
                     </div>
                 </div>
 
@@ -217,7 +213,7 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo17.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
+                        <p>Brains in in the genes.</p>
                     </div>
                 </div>
 
@@ -225,7 +221,7 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo18.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
+                        <p>NYSC</p>
                     </div>
                 </div>
 
@@ -233,7 +229,6 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo20.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
                     </div>
                 </div>
 
@@ -241,7 +236,6 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo21.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
                     </div>
                 </div>
 
@@ -249,7 +243,7 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo22.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
+                        <p>Youngest Couple in town</p>
                     </div>
                 </div>
 
@@ -257,7 +251,6 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo23.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
                     </div>
                 </div>
 
@@ -265,7 +258,8 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo24.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
+                        <p>We had to shut down The whole Lagos</p>
+                        <p>You Always did know how to throw a good party😍😍</p>
                     </div>
                 </div>
 
@@ -273,7 +267,7 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo25.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
+                        <p>Happily Joined life😎.</p>
                     </div>
                 </div>
 
@@ -281,7 +275,7 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo26.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
+                        <p>Looks like a matric?</p>
                     </div>
                 </div>
 
@@ -289,7 +283,6 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo27.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
                     </div>
                 </div>
 
@@ -297,61 +290,82 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo28.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
+                        <p>Always there everystep of the way.</p>
+                        <p>I graduated and finished strong with you by my side</p>
                     </div>
                 </div>
+
                 <!-- Page 32: Your second photo and story -->
                 <div class="page">
                     <div class="page-content">
-                        <img src="images/photo29.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
+                        <img src="images/photo42.jpg" alt="Another memory">
+                        <p>So did my sister.</p>
+                    </div>
+                </div>
+
+                <!-- Page 44: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo44.jpg" alt="Another memory">
+                        <p>And my dear Elder brother too also</p>
+                        <p>She was there.</p>
                     </div>
                 </div>
 
                 <!-- Page 33: Your second photo and story -->
                 <div class="page">
                     <div class="page-content">
-                        <img src="images/photo30.jpg" alt="Another memory">
-                        <p>Your story for the second photo goes here.</p>
+                        <img src="images/photo29.jpg" alt="Another memory">
                     </div>
                 </div>
 
                 <!-- Page 34: Your second photo and story -->
                 <div class="page">
                     <div class="page-content">
-                        <img src="images/photo31.jpg" alt="Another memory">
+                        <img src="images/photo30.jpg" alt="Another memory">
                     </div>
                 </div>
 
                 <!-- Page 35: Your second photo and story -->
                 <div class="page">
                     <div class="page-content">
-                        <img src="images/photo32.jpg" alt="Another memory">
+                        <img src="images/photo31.jpg" alt="Another memory">
+                        <p>Always working hard for us</p>
+                        <p>The God who sees all would reward all</p>
                     </div>
                 </div>
 
                 <!-- Page 36: Your second photo and story -->
                 <div class="page">
                     <div class="page-content">
-                        <img src="images/photo33.jpg" alt="Another memory">
+                        <img src="images/photo32.jpg" alt="Another memory">
+                        <p>I was small oo</p>
                     </div>
                 </div>
 
                 <!-- Page 37: Your second photo and story -->
                 <div class="page">
                     <div class="page-content">
-                        <img src="images/photo34.jpg" alt="Another memory">
+                        <img src="images/photo33.jpg" alt="Another memory">
                     </div>
                 </div>
 
                 <!-- Page 38: Your second photo and story -->
                 <div class="page">
                     <div class="page-content">
-                        <img src="images/photo35.jpg" alt="Another memory">
+                        <img src="images/photo34.jpg" alt="Another memory">
+                        <p>Yes we just all had to be here to be in the Sunday mood</p>
                     </div>
                 </div>
 
                 <!-- Page 39: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo35.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 40: Your second photo and story -->
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo36.jpg" alt="Another memory">
@@ -376,20 +390,7 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo40.jpg" alt="Another memory">
-                    </div>
-                </div>
-
-                <!-- Page 44: Your second photo and story -->
-                <div class="page">
-                    <div class="page-content">
-                        <img src="images/photo41.jpg" alt="Another memory">
-                    </div>
-                </div>
-
-                <!-- Page 45: Your second photo and story -->
-                <div class="page">
-                    <div class="page-content">
-                        <img src="images/photo42.jpg" alt="Another memory">
+                        <p>Nothing beats family</p>
                     </div>
                 </div>
 
@@ -403,7 +404,7 @@
                 <!-- Page 47: Your second photo and story -->
                 <div class="page">
                     <div class="page-content">
-                        <img src="images/photo44.jpg" alt="Another memory">
+                        <img src="images/photo41.jpg" alt="Another memory">
                     </div>
                 </div>
 
@@ -411,6 +412,7 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo45.jpg" alt="Another memory">
+                        <p>Tolu looks small 😉</p>
                     </div>
                 </div>
 
@@ -446,6 +448,7 @@
                 <div class="page">
                     <div class="page-content">
                         <img src="images/photo50.jpg" alt="Another memory">
+                        <p>I present to you this Award</p>
                     </div>
                 </div>
 
@@ -459,7 +462,11 @@
                 <!-- Page 55: Your second photo and story -->
                 <div class="page">
                     <div class="page-content">
-                        <img src="images/photo52.jpg" alt="Another memory">
+                        <img src="images/photo15.jpg" alt="Another memory">
+                        <p>A beautiful family was born</p>
+                        <p>We have come to celebrate and we shall enjoy many more years to come</p>
+                        <p>This moment i am truly grateful</p>
+                        <p>for my lovely mother</p>
                     </div>
                 </div>
 
@@ -468,9 +475,6 @@
 
                 <!-- Page 57: The Back Cover -->
                 <div class="page hard"></div>
-                <p>It has been a pleasure working on this.</p>
-                <p>It is inspired by all those who gave images</p>
-                <p>Thank you for believing when things were impossible</p>
             </div>
         </div>
 
@@ -478,6 +482,12 @@
         <audio id="background-song" loop>
             <source src="audio\God_is_in_this_story.mp3" type="audio/mpeg">
         </audio>
+    </div>
+
+    <div id="image-lightbox" style="display: none;">
+        <span id="close-lightbox">&times;</span>
+        <img src="" alt="Expanded View" id="lightbox-img">
+        <p id="lightbox-caption">Click anywhere to close</p>
     </div>
 
     <!-- Link to our JavaScript file for functionality -->

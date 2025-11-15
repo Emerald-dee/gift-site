@@ -108,6 +108,17 @@ body {
 }
 
 /* --- Section 2: Main Content --- */
+
+#confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1; /* Sits behind the landing page text */
+    pointer-events: none; /* Allows clicks to go through it */
+}
+
 #website-content {
     display: none;
 }
@@ -119,6 +130,8 @@ body {
     width: 100vw;
     height: 100vh;
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 .landing-content {
@@ -161,7 +174,27 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.05);
+}
+
+#background-video {
+    position: fixed; /* Fixes it to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the screen without distortion */
+    z-index: -2; /* Pushes it to the very back */
+}
+
+#video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Use our theme color to create an elegant, branded tint */
+    background-color: rgba(0, 45, 98, 0.6); /* Royal Blue at 60% opacity */
+    z-index: -1; /* Sits on top of the video, but behind the album */
 }
 
 #album {
