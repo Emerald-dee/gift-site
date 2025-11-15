@@ -3,7 +3,7 @@
 /* =================================================================== */
 
 // --- Section 1: Countdown Timer Logic (This part is fine) ---
-const UNLOCK_DATETIME_STRING = "2025-11-15T00:00:00";
+const UNLOCK_DATETIME_STRING = "2025-11-15T12:00:00";
 const lockScreen = document.getElementById('lock-screen');
 const websiteContent = document.getElementById('website-content');
 const daysEl = document.getElementById('days');
