@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Gift for Mum</title>
+    <!-- Link to our CSS file for styling -->
+    <link rel="stylesheet" href="css/test.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- Google Fonts for that luxury feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Lato:wght@300;400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- SECTION 1: The Lock Screen -->
+    <div id="lock-screen">
+        <div class="lock-content-box">
+            <div class="icon-mj"></div> <!-- Subtle nod to Michael Jackson -->
+            <h1>The Countdown Begins</h1>
+            <p>A gift of appreciation, unlocking soon...</p>
+
+            <div class="countdown-container">
+                <div class="countdown-el">
+                    <p class="big-text" id="days">00</p>
+                    <span>Days</span>
+                </div>
+                <div class="countdown-el">
+                    <p class="big-text" id="hours">00</p>
+                    <span>Hours</span>
+                </div>
+                <div class="countdown-el">
+                    <p class="big-text" id="minutes">00</p>
+                    <span>Minutes</span>
+                </div>
+                <div class="countdown-el">
+                    <p class="big-text" id="seconds">00</p>
+                    <span>Seconds</span>
+                </div>
+            </div>
+
+            <p class="audio-note">For the best experience, please use headphones.</p>
+        </div>
+    </div>
+
+    <!-- SECTION 2: The Main Website Content (Initially Hidden) -->
+    <div id="website-content">
+
+        <!-- The Landing Page -->
+        <div id="landing-page">
+            <div class="landing-content">
+                <h1>Happy Birthday, Mum</h1>
+                <p>This is a gift of appreciation, a reflection of the beautiful story you've written. Thank you for
+                    everything.</p>
+                <button id="enter-button">Begin the Journey</button>
+            </div>
+        </div>
+
+        <!-- The Photo Album (We will build this later) -->
+        <div id="photo-album-container">
+            <div id="album">
+                <!-- Page 1: The Cover -->
+                <div class="page hard">
+                    <h2>A Story of Grace</h2>
+                </div>
+
+                <!-- Page 2: Blank Inside Cover -->
+                <div class="page hard">
+                    <!-- <button class="b1" type="button" onclick="$('#album').turn('page', currentPage - 2);">previous</button>
+                    <button class="b2" type="button" onclick="$('#album').turn('page', currentPage + 2);">next</button> -->
+                </div>
+
+                <!-- Page 3: Your first photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo1.jpg" alt="A memory">
+                        <div>
+                            <p>Celebrating a true legend.</p>
+                            <p>A pillar, beacon of hope, and a true caring woman</p>
+                            <p>My mother</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 4: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo7.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 5: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo19.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 6: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo13.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 8: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo2.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 9: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo3.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 10: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo4.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 11: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo5.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 12: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo6.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 13: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo8.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 14: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo9.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 15: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo10.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 16: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo11.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 17: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo12.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 18: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo14.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 19: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo15.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 20: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo16.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 21: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo17.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 22: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo18.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 23: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo20.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 24: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo21.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 25: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo22.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 26: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo23.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 27: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo24.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 28: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo25.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 29: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo26.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 30: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo27.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 31: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo28.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+                <!-- Page 32: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo29.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 33: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo30.jpg" alt="Another memory">
+                        <p>Your story for the second photo goes here.</p>
+                    </div>
+                </div>
+
+                <!-- Page 34: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo31.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 35: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo32.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 36: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo33.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 37: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo34.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 38: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo35.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 39: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo36.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 41: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo38.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 42: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo39.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 43: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo40.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 44: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo41.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 45: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo42.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 46: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo43.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 47: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo44.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 48: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo45.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 49: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo46.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 50: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo47.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 51: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo48.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 52: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo49.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 53: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo50.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 54: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo51.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 55: Your second photo and story -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="images/photo52.jpg" alt="Another memory">
+                    </div>
+                </div>
+
+                <!-- Page 56: Blank Inside Back Cover -->
+                <div class="page hard"></div>
+
+                <!-- Page 57: The Back Cover -->
+                <div class="page hard"></div>
+                <p>It has been a pleasure working on this.</p>
+                <p>It is inspired by all those who gave images</p>
+                <p>Thank you for believing when things were impossible</p>
+            </div>
+        </div>
+
+        <!-- The background audio file -->
+        <audio id="background-song" loop>
+            <source src="audio\God_is_in_this_story.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Link to our JavaScript file for functionality -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="./js/turn.min.js"></script>
+    <!-- <script type="text/javascript" src="./js/turn.min.js"></script> -->
+
+    <!-- <script type="text/javascript" src="./jquery-3.7.1.min.js"></script> -->
+
+    <script src="js/test.js"></script>
+</body>
+
+</html>
